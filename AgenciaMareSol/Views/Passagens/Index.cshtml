@@ -1,0 +1,53 @@
+﻿@model IEnumerable<AgenciaMareSol.Models.Passagem>
+
+@{
+    ViewData["Title"] = "Passagens";
+}
+
+
+<div class="text-center ">
+    <h1 class="display-4">Passagens</h1>
+    <br />
+    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <p>
+            <a asp-action="Create" class="btn btn-primary my-1">Insira os dados</a>
+        </p>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Numero)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Contato_Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Promocao_Id)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Numero)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Contato_Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Promocao_Id)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-info">Editar</a>
+                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-success">Detalhes</a>
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

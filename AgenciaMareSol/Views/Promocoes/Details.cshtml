@@ -1,0 +1,36 @@
+﻿@model AgenciaMareSol.Models.Promocao
+
+@{
+    ViewData["Title"] = "Detalhes da promoção";
+}
+
+<h1 class="text-center">Promoção</h1>
+
+<div>
+    <h4>Detalhes</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DataViagem)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DataViagem)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Destino_Id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Destino_Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id" type="button" class="btn btn-info">Editar</a>
+    <a asp-action="Index" type="button" class="btn btn-success">voltar</a>
+</div>

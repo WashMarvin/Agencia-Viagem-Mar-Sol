@@ -1,0 +1,61 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@500;600;800&family=Josefin+Slab:ital,wght@0,200;0,300;0,400;0,500;1,300;1,400&family=Mulish:ital,wght@0,300;0,600;1,200;1,300;1,400;1,500&display=swap');
+
+
+*{
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0e6c7ec
+    
+}
+
+.header{
+    padding: 20px 0;
+}
+
+.center{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+html, body{
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+}
+
+.logo{
+    width: 50%;
+    padding-top: 30px;
+}
+
+.menu{
+    width: 50%;
+    text-align: right;
+    padding-top: 30px;
+}
+
+.menu a{
+    color: #808080;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+section,sobre{
+    height: calc(100% - 100px);
+    position: relative;
+}
+
+.texto{
+    text-align: center; 
+    width: 70%;
+    padding-top: 50px;
+    color: #808080;
+}

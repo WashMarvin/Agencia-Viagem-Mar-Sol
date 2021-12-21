@@ -1,0 +1,36 @@
+﻿@model AgenciaMareSol.Models.Passagem
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<h1 class="text-center">Passagem</h1>
+
+<div>
+    <h4>Detalhes</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Numero)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Numero)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Contato_Id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Contato_Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Promocao_Id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Promocao_Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id" type="button" class="btn btn-info">Editar</a>
+    <a asp-action="Index" type="button" class="btn btn-success">voltar</a>
+</div>

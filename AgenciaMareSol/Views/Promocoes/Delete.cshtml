@@ -1,0 +1,38 @@
+﻿@model AgenciaMareSol.Models.Promocao
+
+@{
+    ViewData["Title"] = "Deletar Promoções";
+}
+
+<h1 class="text-center">Promoções</h1>
+
+<div>
+    <h4>Deletar</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DataViagem)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DataViagem)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Destino_Id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Destino_Id)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" />
+        <a asp-action="Index" class="btn btn-success">Voltar</a>
+    </form>
+</div>
